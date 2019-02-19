@@ -1,5 +1,5 @@
-import { Component, EventEmitter, Input, Output,  } from '@angular/core';
-import { Product } from '../product.model.ts';
+import { Component, EventEmitter, Input, Output, OnInit } from '@angular/core';
+import { Product } from '../product/products.model';
 
 @Component({
   selector: 'app-product-list',
@@ -20,6 +20,9 @@ export class ProductListComponent implements OnInit {
     this.onProductSelected = new EventEmitter();
   }
 
+  ngOnInit() {
+  }
+  
   clicked(product: Product): void {
     this.currentProduct = product;
     this.onProductSelected.emit(product);

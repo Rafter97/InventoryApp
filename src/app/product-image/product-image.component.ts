@@ -1,5 +1,5 @@
-import { Component,  Input, HostBinding } from '@angular/core';
-import { Product } from '/products.ts';
+import { Component,  Input, HostBinding,OnInit } from '@angular/core';
+import { Product } from '../product/products.model';
 
 
 @Component({
@@ -14,7 +14,9 @@ export class ProductImageComponent implements OnInit {
   @HostBinding('attr.class') cssClass = 'ui small image';
 
   constructor() { }
-
+  
+  ngOnInit() {
+  }
 
 
 
