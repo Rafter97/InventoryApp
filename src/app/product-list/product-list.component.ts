@@ -20,9 +20,8 @@ export class ProductListComponent implements OnInit {
     this.onProductSelected = new EventEmitter();
   }
 
-  ngOnInit() {
-  }
-  
+
+
   clicked(product: Product): void {
     this.currentProduct = product;
     this.onProductSelected.emit(product);
@@ -33,5 +32,7 @@ export class ProductListComponent implements OnInit {
       return false;
     }
     return product.sku === this.currentProduct.sku;
+  }
+  ngOnInit() {
   }
 }
